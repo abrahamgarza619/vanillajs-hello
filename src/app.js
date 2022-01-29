@@ -25,11 +25,16 @@ let when = [
 // console.log(action[Math.floor(Math.random() * when.length)]);
 
 let generateExcuse = () => {
-  var excuse = action[Math.floor(Math.random() * action.length)];
-  var excuse2 = when[Math.floor(Math.random() * when.length)];
-  var excuse3 = who[Math.floor(Math.random() * who.length)];
-  var excuse4 = what[Math.floor(Math.random() * what.length)];
-  return excuse3 + " " + excuse + " " + excuse4 + " " + excuse2;
+  var randomExcuse =
+    who[Math.floor(Math.random() * who.length)] +
+    " " +
+    action[Math.floor(Math.random() * action.length)] +
+    " " +
+    what[Math.floor(Math.random() * what.length)] +
+    " " +
+    when[Math.floor(Math.random() * when.length)];
+
+  return randomExcuse;
 };
 
 document.getElementById("excuse").innerHTML = generateExcuse();
